@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Support Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tech Support Assistant</h1>
+            <p class="tagline">Get instant technical support with our AI-powered chatbot</p>
+        </header>
+        
+        <main>
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h2>Issue Details</h2>
+                    <div class="form-group">
+                        <label for="device-type">Device Type</label>
+                        <select id="device-type">
+                            <option value="">Select device type</option>
+                            <option value="desktop">Desktop Computer</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="mobile">Mobile Device</option>
+                            <option value="tablet">Tablet</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="os-type">Operating System</label>
+                        <select id="os-type">
+                            <option value="">Select OS</option>
+                            <option value="windows">Windows</option>
+                            <option value="macos">macOS</option>
+                            <option value="linux">Linux</option>
+                            <option value="android">Android</option>
+                            <option value="ios">iOS</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="issue-category">Issue Category</label>
+                        <select id="issue-category">
+                            <option value="">Select category</option>
+                            <option value="hardware">Hardware Problem</option>
+                            <option value="software">Software Issue</option>
+                            <option value="network">Network/Internet</option>
+                            <option value="security">Security</option>
+                            <option value="performance">Performance</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h2>Priority Level</h2>
+                    <div class="priority-options">
+                        <div class="priority-option" data-priority="low">
+                            <h4>Low Priority</h4>
+                            <p>Minor issues, no impact on work</p>
+                        </div>
+                        <div class="priority-option" data-priority="medium">
+                            <h4>Medium Priority</h4>
+                            <p>Affecting work but has workaround</p>
+                        </div>
+                        <div class="priority-option" data-priority="high">
+                            <h4>High Priority</h4>
+                            <p>Critical issue needs immediate attention</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-header">
+                    Tech Support Assistant
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        Hello! I'm your tech support assistant. I can help you troubleshoot technical issues with your devices, software, or network problems. Please describe your issue or fill in the details in the sidebar to get started.
+                    </div>
+                </div>
+                <div class="typing-indicator" id="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="chat-input">
+                    <textarea id="user-input" placeholder="Describe your technical issue here..."></textarea>
+                    <button class="send-btn" id="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
